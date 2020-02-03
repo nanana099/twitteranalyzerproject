@@ -27,13 +27,13 @@ Route::get('/', function () {
 // ログインが必要なルート
 Route::middleware(['auth'])->group(function () {
     // TwitterAPIのコールバック
-    Route::get('account/callback', 'TwitterController@callback');  
+    Route::get('account/callback', 'TwitterAccountController@callback');  
     // ツイートデータ読み込み画面
-    Route::get('registtweet/show', 'RestTweetController@show');  
+    Route::get('registtweet/show', 'RegistTweetController@show');  
     // ツイートデータ読み込み画面からの更新
-    Route::post('registtweet/post', 'RestTweetController@upsert');  
+    Route::post('registtweet/post', 'RegistTweetController@upsert');  
     // ツイート一覧画面
-    Route::get('tweets/show', 'TweetsController@show');  
+    Route::get('tweets/show', 'TweetListController@show');  
     // 単語解析画面
-    Route::get('words/show', 'WordsController@show');  
+    Route::get('words/show', 'WordAnalyzerController@show');  
 });
