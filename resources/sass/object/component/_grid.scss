@@ -1,0 +1,53 @@
+// bootstrap風に使えるグリッドシステム用コンポーネント
+// marginやpaddingなどを除外し、FLOCSSの命名規則でcomponent化
+// c-row, c-col 以外に、 c-col-(2〜12), c-col-sm(2〜12), c-col-md(2〜12) を生成している
+
+.c-row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+@mixin setColWidth($width){
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 $width;
+	flex: 0 0 $width;
+	max-width: $width;
+}
+.c-col{
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	@for $i from 2 through 12 {
+		&-#{$i}{
+			@include setColWidth(#{100*$i/12} +"%");
+		}
+	}
+	@for $i from 2 through 12 {
+		&-sm#{$i}{
+			@include mq("sm-up"){
+				@include setColWidth(#{100*$i/12} +"%");
+			}
+		}
+	}
+	@for $i from 2 through 12 {
+		&-md#{$i}{
+			@include mq("md-up"){
+				@include setColWidth(#{100*$i/12} +"%");
+			}
+		}
+  }
+  @for $i from 2 through 12 {
+		&-lg#{$i}{
+			@include mq("lg-up"){
+				@include setColWidth(#{100*$i/12} +"%");
+			}
+		}
+	}
+}
+// --------------------------------------------------
+// 使用例
+// --------------------------------------------------
+//
+// 参考記事: 
+// https://getbootstrap.jp/docs/4.2/layout/grid/
+// http://websae.net/twitter-bootstrap-grid-system-21060224/
