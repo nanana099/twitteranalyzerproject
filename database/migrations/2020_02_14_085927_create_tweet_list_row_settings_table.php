@@ -15,7 +15,12 @@ class CreateTweetListRowSettingsTable extends Migration
     {
         Schema::create('tweet_list_row_settings', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->unsignedBigInteger('tweet_property_definition_id');
+            $table->integer('order');
+            $table->unsignedBigInteger('user_id');
+
+            $table->foreign('tweet_property_definition_id')->references('id')->on('tweet_property_definitions');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

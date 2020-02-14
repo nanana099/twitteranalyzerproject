@@ -15,7 +15,8 @@ class CreatePlanDefinitionsTable extends Migration
     {
         Schema::create('plan_definitions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->string('name');
+            $table->integer('price');
         });
     }
 

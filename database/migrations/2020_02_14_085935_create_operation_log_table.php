@@ -15,7 +15,12 @@ class CreateOperationLogTable extends Migration
     {
         Schema::create('operation_log', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_operation_definition_id');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_operation_definition_id')->references('id')->on('user_operation_definitions');
         });
     }
 

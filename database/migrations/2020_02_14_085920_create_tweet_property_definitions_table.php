@@ -15,7 +15,7 @@ class CreateTweetPropertyDefinitionsTable extends Migration
     {
         Schema::create('tweet_property_definitions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->string('name');
         });
     }
 

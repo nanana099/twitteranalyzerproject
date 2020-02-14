@@ -15,7 +15,11 @@ class CreateCsvUploadedHistoriesTable extends Migration
     {
         Schema::create('csv_uploaded_histories', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->string('file_name');
+            $table->unsignedBigInteger('twitter_account_id');
+            $table->dateTime('uploaded_at');
+
+            $table->foreign('twitter_account_id')->references('id')->on('twitter_accounts');
         });
     }
 

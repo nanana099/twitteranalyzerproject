@@ -15,7 +15,13 @@ class CreatePlanHistoriesTable extends Migration
     {
         Schema::create('plan_histories', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->dateTime('started_at');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('plan_definition_id');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('plan_definition_id')->references('id')->on('plan_definitions');
         });
     }
 

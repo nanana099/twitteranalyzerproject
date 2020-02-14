@@ -15,7 +15,13 @@ class CreateSavedTweetSearchQueriesTable extends Migration
     {
         Schema::create('saved_tweet_search_queries', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->integer('query_set_id');
+            $table->unsignedBigInteger('tweet_search_query_definition_id');
+            $table->string('param')->nullable();
+            $table->unsignedBigInteger('user_id');
+
+            $table->foreign('tweet_search_query_definition_id')->references('id')->on('tweet_search_query_definitions')->name("saved_tweet_search_queries_foreign");;
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

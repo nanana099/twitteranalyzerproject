@@ -15,7 +15,14 @@ class CreateTweetSearchQueryHistoriesTable extends Migration
     {
         Schema::create('tweet_search_query_histories', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('query_set_id');
+            $table->unsignedBigInteger('tweet_search_query_definition_id');
+            $table->string('param')->nullable();
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
+
+            $table->foreign('tweet_search_query_definition_id')->references('id')->on('tweet_search_query_definitions')->name('tweet_serach_query_histories_foreign');
+            $table->foreign('user_id')->references('id')->on('users');            
         });
     }
 

@@ -15,7 +15,7 @@ class CreateTweetSearchQueryDefinitionsTable extends Migration
     {
         Schema::create('tweet_search_query_definitions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->string('name');
         });
     }
 

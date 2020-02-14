@@ -15,7 +15,13 @@ class CreateTwitterAccountsTable extends Migration
     {
         Schema::create('twitter_accounts', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('twitter_user_id');
+            $table->string('screen_name');
+            $table->string('image');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
+            
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
