@@ -1,0 +1,10 @@
+
+// --------------------------------------------------
+// メディアクエリ用mixin
+// 引数は sm,md,lg,xl,sm-up,md-up,lg-up,xl-up 
+// 数値は_variables.scss > $breakpoints を参照
+@mixin mq($breakpoint: sm) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  }

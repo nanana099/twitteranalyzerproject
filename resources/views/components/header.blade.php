@@ -1,51 +1,18 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-    <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'Laravel') }}
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav mr-auto">
-
-            </ul>
-
-            <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav ml-auto">
-                <!-- Authentication Links -->
-                @guest
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                </li>
-                @if (Route::has('register'))
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                </li>
-                @endif
-                @else
-                <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }} <span class="caret"></span>
-                    </a>
-
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                    </div>
-                </li>
-                @endguest
-            </ul>
+<header id="header">
+    <div class="c-site-width p-header__wrapper">
+        <div class="c-logo">
+            <a href="">
+                <img src="{{ asset('/images/logo.png') }}" alt="つぶやきプランナー" class="">
+            </a>
         </div>
+        <nav class="">
+            <ul class="c-gnav__list">
+                <li class="c-gnav__item"><a href="" class="c-gnav__link">ツイート <i class="fas fa-list-ul"></i></a></li>
+                <li class="c-gnav__item"><a href="" class="c-gnav__link">分析 <i class="fas fa-chart-bar"></i></a></li>
+                <li class="c-gnav__item"><a href="" class="c-gnav__link">データ登録 <i class="fas fa-upload"></i></a></li>
+                <li class="c-gnav__item"><a href="" class="c-gnav__link"><div class="p-header__twiicon"></div></a></li>
+                <li class="c-gnav__item"><a href="" class=""><i class="fas fa-cog p-header__setting-icon"></i></a></li>
+            </ul>
+        </nav>
     </div>
-</nav>
+</header>

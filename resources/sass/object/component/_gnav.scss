@@ -1,0 +1,23 @@
+.c-gnav {
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__item {
+    margin-right: $space-m;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    padding: $space-s 0;
+    text-decoration: none;
+    color: $color-font;
+      transition: 0.3s;
+      &:hover {
+      transition: 0.3s;
+      border-bottom: 2px solid $color-main;
+    }
+  }
+}

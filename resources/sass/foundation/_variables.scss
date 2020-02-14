@@ -1,0 +1,35 @@
+// SiteColows
+$color-base: #ffffff; // 背景等
+$color-main: #2c4bff; // ボタン等
+$color-sub : #8697fb; // 枠線等
+$color2-sub: #e1e2e3; // テーブルヘッダー等
+$color-font: #1d1d1d; // 文字色
+
+// SiteWidth
+$site-width: 940px;
+
+// Space
+$space-xs: 5px;
+$space-s: 10px;
+$space-m: 20px;
+$space-l: 30px;
+$space-xl: 40px;
+$space-xxl: 50px;
+$space-3l: 60px;
+
+// font-size 
+$font-size-base : 1.6rem;
+$font-family-base: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+
+// breakpoints定義
+// BootStrap準拠
+$breakpoints: (
+  'sm': 'screen and (max-width: 575px)',
+  'md': 'screen and (max-width: 767px)',
+  'lg': 'screen and (max-width: 991px)',
+	'xl': 'screen and (max-width: 1199px)',
+	'sm-up': 'screen and (min-width: 576px)',
+  'md-up': 'screen and (min-width: 768px)',
+  'lg-up': 'screen and (min-width: 992px)',
+  'xl-up': 'screen and (min-width: 1200px)',
+) !default;
