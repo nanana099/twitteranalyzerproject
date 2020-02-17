@@ -345,8 +345,8 @@ p {
       -ms-user-select: none;
           user-select: none;
   border: 1px #2c4bff solid;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
   font-size: 1.6rem;
 }
 

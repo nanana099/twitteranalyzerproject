@@ -70,12 +70,11 @@
   text-decoration: none;
   user-select: none;
   border: 1px $color-main solid;
-  transition: 0.3s ease;
+  transition: 0.1s ;
   font-size: $font-size-base;
   &:hover {
     background: #d3d9fc;
   }
-
   &--primary {
     color: #ffffff;
     background: $color-main;
