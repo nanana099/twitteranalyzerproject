@@ -14,9 +14,8 @@
     padding: $space-s 0;
     text-decoration: none;
     color: $color-font;
-      transition: 0.3s;
-      &:hover {
-      transition: 0.3s;
+    &:hover {
+      color: $color-main;
       border-bottom: 2px solid $color-main;
     }
   }

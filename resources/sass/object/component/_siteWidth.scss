@@ -1,4 +1,7 @@
 .c-site-width{
-    width: 940px;
+    width: 960px;
+    padding-right: $space-s;
+    padding-left: $space-s;
     margin: 0 auto;
+    box-sizing: border-box;
 }

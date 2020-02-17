@@ -1,19 +1,108 @@
-.p-header{
-    &__wrapper{
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    &__twiicon{
+.p-header {
+  &__wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__twiicon {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 100%;
+    border: 2px dashed #444444;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+  &__setting-icon {
+    font-size: 20px;
+  }
+}
 
-        width: 40px;
-        height: 40px;
-        background: red;
-        position: relative;
-        border-radius: 100%;
+.c-fukidasi {
+  background: orange;
+  position: absolute;
+  bottom: -130%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  -webkit-box-shadow: 0 1px 8px -1px rgba(168, 168, 168, 0.95);
+  -moz-box-shadow: 0 1px 8px -1px rgba(168, 168, 168, 0.95);
+  box-shadow: 0 1px 8px -1px rgba(168, 168, 168, 0.95);
+
+  &--anime {
+    -webkit-animation: fuwafuwa 2s infinite linear alternate;
+    animation: fuwafuwa 2s infinite linear alternate;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-bottom: 15px solid orange;
+    border-radius: 10%;
+  }
+}
+@-webkit-keyframes fuwafuwa {
+  0% {
+    -webkit-transform: translate(-50%, 0);
+  }
+  50% {
+    -webkit-transform: translate(-50%, 4px);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 0);
+  }
+}
+@keyframes fuwafuwa {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 4px);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+.c-btn {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 0.8em 1.6em;
+  color: $color-main;
+  text-decoration: none;
+  user-select: none;
+  border: 1px $color-main solid;
+  transition: 0.3s ease;
+  &:hover {
+    background: #d3d9fc;
+  }
+
+  &--primary {
+    color: #ffffff;
+    background: $color-main;
+    &:hover {
+      background: #14247c;
     }
-    &__setting-icon{
-        font-size: 20px;
-    }
+  }
+
+  &--square {
+    border-radius: 5px;
+  }
+  &--circle {
+    border-radius: 50px;
+  }
 }

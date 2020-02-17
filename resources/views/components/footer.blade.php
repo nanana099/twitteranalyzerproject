@@ -1,3 +1,5 @@
 <footer id="footer">
-    aaa
+    <div class="c-site-width">
+        contents
+    </div>
 </footer>
