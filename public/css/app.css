@@ -263,6 +263,10 @@ p {
   line-height: 1.5;
 }
 
+.c-content {
+  min-height: calc(100vh - (84px * 2) );
+}
+
 .c-fukidasi {
   background: orange;
   position: absolute;

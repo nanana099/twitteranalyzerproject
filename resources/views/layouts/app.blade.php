@@ -16,7 +16,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-        <link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
@@ -25,11 +25,11 @@
 <body>
     <div id="app">
         @include('components.header')
-        <main class="py-4">
+        <main class="c-content">
             @yield('content')
         </main>
+        @include('components.footer')
     </div>
-    @include('components.footer')
 
 </body>
 
