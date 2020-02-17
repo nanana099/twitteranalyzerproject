@@ -1,0 +1,378 @@
+// 吹き出し
+.c-fukidasi {
+  background: orange;
+  position: absolute;
+  bottom: -130%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  -webkit-box-shadow: 0 1px 8px -1px rgba(168, 168, 168, 0.95);
+  -moz-box-shadow: 0 1px 8px -1px rgba(168, 168, 168, 0.95);
+  box-shadow: 0 1px 8px -1px rgba(168, 168, 168, 0.95);
+
+  &--anime {
+    -webkit-animation: fuwafuwa 2s infinite linear alternate;
+    animation: fuwafuwa 2s infinite linear alternate;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-bottom: 15px solid orange;
+    border-radius: 10%;
+  }
+}
+@-webkit-keyframes fuwafuwa {
+  0% {
+    -webkit-transform: translate(-50%, 0);
+  }
+  50% {
+    -webkit-transform: translate(-50%, 4px);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 0);
+  }
+}
+@keyframes fuwafuwa {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 4px);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+//   ボタン
+.c-btn {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 0.8em 1.6em;
+  color: $color-main;
+  text-decoration: none;
+  user-select: none;
+  border: 1px $color-main solid;
+  transition: 0.3s ease;
+  font-size: $font-size-base;
+  &:hover {
+    background: #d3d9fc;
+  }
+
+  &--primary {
+    color: #ffffff;
+    background: $color-main;
+    &:hover {
+      background: #14247c;
+    }
+  }
+
+  &--square {
+    border-radius: 5px;
+  }
+  &--circle {
+    border-radius: 50px;
+  }
+}
+
+// セレクトボックス
+
+.c-select {
+  &-wrap {
+    display: inline-block;
+    position: relative;
+  }
+  &-arrow {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    z-index: 2;
+    color: #888;
+    font-size: 12px;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+  }
+  width: 200px;
+  position: relative;
+  z-index: 2;
+  height: 48px;
+  padding: 0 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+// セクション
+.c-section {
+  margin-bottom: $space-xxl;
+  &:last-child {
+    margin-bottom: 100px;
+  }
+}
+
+// タイトル
+.c-page-title {
+  font-size: 2.2rem;
+  border-left: 4px solid $color-main;
+  padding: $space-xs;
+  margin-bottom: $space-xxl;
+}
+
+.p-registtweet {
+  // 手順概要欄
+  &__steps {
+    &-wrapper {
+      display: block;
+      text-align: center;
+      margin-bottom: $space-l;
+    }
+    &--link {
+      &-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+      font-size: $font-size-small;
+      margin-bottom: $space-xs;
+    }
+  }
+  // ファイルアップロード欄
+  &__upload {
+    &-file {
+      &-area {
+        width: 100%;
+        height: 200px;
+        background: #eeeeee;
+        border: 1px dashed #848484;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        margin-bottom: $space-xxl;
+      }
+      &-input {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+      }
+    }
+    &-btn {
+      width: 100%;
+    }
+  }
+
+  // アップロード済みファイル一覧欄
+  &__uploaded-file {
+    &-area {
+      width: 100%;
+      padding: $space-m $space-s;
+      border: 1px solid $color-sub;
+      border-radius: 5px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-bottom: $space-xxl;
+    }
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 $space-s $space-s $space-s;
+      width: 100%;
+      border-bottom: 1px solid $color-sub;
+      margin-bottom: $space-s;
+      box-sizing: border-box;
+    }
+  }
+}
+
+// バツボタン
+.c-btn--batu {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  background: $color2-sub;
+  border-radius: 50px;
+  padding: $space-xs;
+  cursor: pointer;
+  box-sizing: border-box;
+  & span::before,
+  & span::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    width: 70%;
+    height: 16%;
+    margin: -8% 0 0 -42%;
+    background: #1f1f1f;
+  }
+  & span::before {
+    transform: rotate(-45deg);
+  }
+  & span::after {
+    transform: rotate(45deg);
+  }
+}
+
+.p-tweetlist {
+  &__inputs {
+    display: flex;
+    justify-content: flex-end;
+    &-item {
+      margin-right: $space-m;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.c-fieldset {
+  border: groove 2px #ccc;
+  position: relative;
+  &-title {
+    position: absolute;
+    top: -0.5em;
+    left: 0.5em;
+    font-size: 1em;
+    display: inline;
+    margin: 0;
+    padding: 0 0.5em;
+    background-color: #fff;
+  }
+}
+
+.p-tweetanal {
+  &__howtolink {
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+      margin-bottom: $space-xs;
+    }
+    font-size: $font-size-small;
+  }
+  &__search-box {
+    width: 100%;
+    padding: $space-l;
+    border: 1px solid $color-sub;
+    border-radius: 5px;
+    box-sizing: border-box;
+    &__item {
+      margin-right: $space-s;
+      font-size: $font-size-medium;
+      &:last-child {
+        margin-right: 0;
+      }
+      &--condition {
+        &-wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        &-name {
+          margin-right: $space-m;
+        }
+        display: inline-block;
+        font-size: $font-size-small;
+        padding: $space-s;
+        margin-bottom: $space-s;
+        box-sizing: border-box;
+        border-radius: 5px;
+        background: #e2e2e2;
+
+        background: -moz-linear-gradient(top, #e2e2e2 0%, #c1c1c1 100%);
+        background: -webkit-linear-gradient(top, #e2e2e2 0%, #c1c1c1 100%);
+        background: linear-gradient(to bottom, #e2e2e2 0%, #c1c1c1 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#c1c1c1',GradientType=0 );
+      }
+    }
+    &__group {
+      margin-bottom: $space-l;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &--right {
+        text-align: right;
+      }
+    }
+  }
+}
+// ツイート一覧のテーブル
+.c-tweet-table {
+  table-layout: fixed;
+  display: table;
+  width: 100%;
+  word-wrap: break-word;
+  font-size: $font-size-small;
+
+  &-wrapper {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  // テーブルヘッダー
+  &__header {
+    border-bottom: 3px solid $color2-sub;
+    box-sizing: border-box;
+  }
+  // カラムの幅設定
+  &__col-1 {
+    width: 300px;
+    box-sizing: border-box;
+  }
+  &__col-2 {
+    width: 80px;
+    box-sizing: border-box;
+  }
+  &__col-3 {
+    width: 40px;
+    box-sizing: border-box;
+  }
+  // 行の設定
+  &__row {
+    border-bottom: 1px solid $color2-sub;
+  }
+  // セルの設定
+  &__cell {
+    padding: $space-s $space-xs;
+    text-align: center;
+    line-height: 1.2;
+    &--left {
+      text-align: left;
+    }
+    &--header {
+      border-bottom: 1px dashed $color-sub;
+    }
+  }
+}

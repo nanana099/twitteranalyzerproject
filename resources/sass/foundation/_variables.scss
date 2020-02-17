@@ -6,7 +6,7 @@ $color2-sub: #e1e2e3; // テーブルヘッダー等
 $color-font: #1d1d1d; // 文字色
 
 // SiteWidth
-$site-width: 940px;
+$site-width: 960px;
 
 // Space
 $space-xs: 5px;
@@ -19,6 +19,10 @@ $space-3l: 60px;
 
 // font-size 
 $font-size-base : 1.6rem;
+$font-size-small: 1.2rem;
+$font-size-medium: 1.4rem;
+
+// font-familly
 $font-family-base: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
 
 // breakpoints定義

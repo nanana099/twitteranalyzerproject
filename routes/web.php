@@ -34,9 +34,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('registtweet/show', 'RegistTweetController@show')->name('registtweet.show'); // ツイートデータ登録画面を表示
     Route::post('registtweet/post', 'RegistTweetController@upsert');            // ツイートデータを更新
     // ３．過去のツイート一覧画面
-    Route::get('tweetlist/show', 'TweetListController@show');                   //過去ツイート一覧を表示
+    Route::get('tweetlist/show', 'TweetListController@show')->name('tweetlist.show');                   //過去ツイート一覧を表示
     // ４．分析画面
-    Route::get('analytics/show', 'AnalyticsController@show');                   // 分析画面表示 
+    Route::get('analytics/show', 'AnalyticsController@show')->name('analytics.show');                   // 分析画面表示 
     // ５．設定
     Route::get('setting/account/show', 'SettingController@showAccount');        // アカウント設定
     Route::get('setting/screen/show', 'SettingController@showScreen');          // 画面設定
