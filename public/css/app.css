@@ -416,7 +416,7 @@ p {
 .c-page-title {
   font-size: 2.2rem;
   border-left: 4px solid #2c4bff;
-  padding: 5px;
+  padding: 5px 10px;
   margin-bottom: 50px;
 }
 
