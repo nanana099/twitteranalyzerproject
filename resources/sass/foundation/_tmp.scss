@@ -542,6 +542,7 @@
     }
   }
 }
+
 .p-login {
   &-panel {
     border-radius: 5px;
@@ -559,7 +560,7 @@
     }
   }
   &-p {
-    display: inline-block;
+    display: block;
     margin-bottom: $space-s;
   }
   &__input {

@@ -13,22 +13,22 @@
                     <a href="{{ route('register') }}" class="c-btn c-btn--square">新規会員登録</a>
                 </div>
                 <div class="p-login-panel__account">
-
-                    <input type="email" placeholder="メールアドレス" name="email" value="{{ old('email') }}" required
-                        class="c-input--text p-login__input">
                     @error('email')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
                     @enderror
-
-                    <input type="password" placeholder="パスワード" name="password" required
+                    <input type="email" placeholder="メールアドレス" name="email" value="{{ old('email') }}" required
                         class="c-input--text p-login__input">
+
                     @error('password')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
                     @enderror
+                    <input type="password" placeholder="パスワード" name="password" required
+                        class="c-input--text p-login__input">
+
 
                     <div class="c-input--checkbox-wrapper p-login__input">
                         <input type="checkbox" class="" name="remember" id="remember"
