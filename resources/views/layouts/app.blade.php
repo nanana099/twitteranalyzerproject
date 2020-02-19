@@ -19,7 +19,7 @@
     <link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
+    <link rel="shortcut icon" href="{{ asset('/images/favicon.ico') }}">
 </head>
 
 <body>
