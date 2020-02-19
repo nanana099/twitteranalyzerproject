@@ -1,10 +1,15 @@
 <template>
   <div>
-    <span>メディア有り{{mediaRate}}%</span>
-    <span>メディア有り{{mediaRate}}%</span>
-    <br>
-    <br>
+    <section class="c-section">
+      <div class="p-analytics-tab__header">
+        <div class="p-analytics-tab__header__summary">
+          <span class="p-analytics-tab__header__summary-item">メディア有り：{{mediaRate}}%</span>
+          <span class="p-analytics-tab__header__summary-item">メディア無し：{{nonMediaRate}}%</span>
+        </div>
+      </div>
+    </section>
     <span>メディアを含むツイート</span>
+
     <div class="c-tweet-table-wrapper">
       <table class="c-tweet-table">
         <thead class="c-tweet-table__header">
