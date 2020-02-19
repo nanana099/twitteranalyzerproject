@@ -1,73 +1,48 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+<section class="c-site-width">
+    <h1 class="c-page-title">ログイン</i></h1>
+    <section class="c-section">
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
+            <div class="p-login-panel">
+                <div class="p-login-panel__no-account">
+                    <p class="p-login-p">アカウントをお持ちでない方はこちら</p>
+                    <a href="" class="c-btn c-btn--square">新規会員登録</a>
+                </div>
+                <div class="p-login-panel__account">
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                    <input type="email" placeholder="メールアドレス" name="email" value="{{ old('email') }}" required
+                        class="c-input--text p-login__input">
+                    @error('email')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                    <input type="password" placeholder="パスワード" name="password" required
+                        class="c-input--text p-login__input">
+                    @error('password')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
+                    <div class="c-input--checkbox-wrapper p-login__input">
+                        <input type="checkbox" class="" name="remember" id="remember"
+                            {{ old('remember') ? 'checked' : '' }}>
+                        <label for="remember" class="">
+                            ログイン状態を保持する
+                        </label>
+                    </div>
+                    <button class="c-btn c-btn--primary p-login__login-btn p-login__input">ログイン</button>
+                    <a href="" class="p-login__input">パスワードをお忘れの方</a>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+        </form>
+    </section>
+
+</section>
 @endsection
