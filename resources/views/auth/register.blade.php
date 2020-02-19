@@ -10,7 +10,7 @@
             <div class="p-login-panel">
                 <div class="p-login-panel__no-account">
                     <p class="p-login-p">アカウントをお持ちの方はこちら</p>
-                    <a href="{{ route('login') }}" class="c-btn c-btn--square">ログイン</a>
+                    <a href="{{ route('login') }}" class="c-btn c-btn--square">ログイン画面へ</a>
                 </div>
                 <div class="p-login-panel__account">
                     @error('email')

@@ -10,7 +10,7 @@
             <div class="p-login-panel">
                 <div class="p-login-panel__no-account">
                     <p class="p-login-p">アカウントをお持ちでない方はこちら</p>
-                    <a href="{{ route('register') }}" class="c-btn c-btn--square">新規会員登録</a>
+                    <a href="{{ route('register') }}" class="c-btn c-btn--square">新規会員登録画面へ</a>
                 </div>
                 <div class="p-login-panel__account">
                     @error('email')
@@ -37,7 +37,7 @@
                             ログイン状態を保持する
                         </label>
                     </div>
-                    <button class="c-btn c-btn--primary p-login__login-btn p-login__input">ログイン</button>
+                    <button class="c-btn c-btn--primary p-login__login-btn p-login__input">ログインする</button>
                     <a href="" class="p-login__input">パスワードをお忘れの方</a>
                 </div>
             </div>
