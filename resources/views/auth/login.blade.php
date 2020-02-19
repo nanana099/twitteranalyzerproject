@@ -10,7 +10,7 @@
             <div class="p-login-panel">
                 <div class="p-login-panel__no-account">
                     <p class="p-login-p">アカウントをお持ちでない方はこちら</p>
-                    <a href="" class="c-btn c-btn--square">新規会員登録</a>
+                    <a href="{{ route('register') }}" class="c-btn c-btn--square">新規会員登録</a>
                 </div>
                 <div class="p-login-panel__account">
 
