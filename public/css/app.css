@@ -717,7 +717,7 @@ p {
 .p_switchbox__content {
   display: none;
   position: absolute;
-  top: 30px;
+  top: 50px;
   right: 0;
 }
 
