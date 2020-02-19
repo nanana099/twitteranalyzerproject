@@ -126,7 +126,7 @@ p {
   text-align: center;
   padding: 10px 10px;
   cursor: pointer;
-  background: #ffffff;
+  background: #fdfdfd;
   border: 2px solid #2c4bff;
   border-bottom: none;
   transition: 0.1s;

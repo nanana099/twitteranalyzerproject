@@ -187,6 +187,12 @@ body {
   background: #ffffff;
 }
 
+main {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #fdfdfd;
+}
+
 html,
 body,
 div,
@@ -956,7 +962,6 @@ p {
   height: 84px;
   width: 100%;
   min-width: 960px;
-  margin-top: 50px;
   box-shadow: 0 -3px 8px -1px rgba(168, 168, 168, 0.95);
   box-sizing: border-box;
 }
@@ -965,9 +970,9 @@ p {
   height: 84px;
   width: 100%;
   min-width: 960px;
-  margin-bottom: 80px;
   box-shadow: 0 3px 8px -1px rgba(168, 168, 168, 0.95);
   box-sizing: border-box;
+  position: relative;
 }
 
 .c-gnav__list {
