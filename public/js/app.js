@@ -2073,6 +2073,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2574,6 +2575,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -73035,11 +73037,11 @@ var staticRenderFns = [
         { staticClass: "c-tweet-table__cell c-tweet-table__cell--left" },
         [
           _vm._v(
-            "\n            開業届と青色申告申請書簡単につくれたー。\n            "
+            "\n              Vue.jsで使えるグラフ描画ライブラリはいくつかありますが、有名なのはどれもChart.jsのラッパーライブラリとなっています。\n              "
           ),
           _c("br"),
           _vm._v(
-            "無料で記入済み書類のpdf作成までしてくれるので、とりあえず書類つくるだけでもオススメです。\n          "
+            "\n今回はその中でも多機能なvue-chartjsを使ってみることにしました。\n            "
           )
         ]
       ),
@@ -73960,11 +73962,11 @@ var staticRenderFns = [
         { staticClass: "c-tweet-table__cell c-tweet-table__cell--left" },
         [
           _vm._v(
-            "\n          開業届と青色申告申請書簡単につくれたー。\n          "
+            "\n                       Vue.jsで使えるグラフ描画ライブラリはいくつかありますが、有名なのはどれもChart.jsのラッパーライブラリとなっています。\n              "
           ),
           _c("br"),
           _vm._v(
-            "無料で記入済み書類のpdf作成までしてくれるので、とりあえず書類つくるだけでもオススメです。\n        "
+            "\n今回はその中でも多機能なvue-chartjsを使ってみることにしました。\n          "
           )
         ]
       ),

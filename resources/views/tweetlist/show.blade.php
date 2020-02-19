@@ -51,8 +51,11 @@
                 </thead>
                 <tbody class="c-tweet-table__body">
                     <tr class="c-tweet-table__row">
-                        <td class="c-tweet-table__cell c-tweet-table__cell--left">開業届と青色申告申請書簡単につくれたー。<br>
-                            無料で記入済み書類のpdf作成までしてくれるので、とりあえず書類つくるだけでもオススメです。</td>
+                        <td class="c-tweet-table__cell c-tweet-table__cell--left">
+                            Vue.jsで使えるグラフ描画ライブラリはいくつかありますが、有名なのはどれもChart.jsのラッパーライブラリとなっています。
+                            <br />
+                            今回はその中でも多機能なvue-chartjsを使ってみることにしました。
+                        </td>
                         <td class="c-tweet-table__cell">2019/01/22</td>
                         <td class="c-tweet-table__cell">99989898</td>
                         <td class="c-tweet-table__cell">99</td>
@@ -76,8 +79,10 @@
                     </tr>
 
                     <tr class="c-tweet-table__row">
-                        <td class="c-tweet-table__cell c-tweet-table__cell--left">開業届と青色申告申請書簡単につくれたー。<br>
-                            無料で記入済み書類のpdf作成までしてくれるので、とりあえず書類つくるだけでもオススメです。</td>
+                        <td class="c-tweet-table__cell c-tweet-table__cell--left">
+                            Vue.jsで使えるグラフ描画ライブラリはいくつかありますが、有名なのはどれもChart.jsのラッパーライブラリとなっています。
+                            <br />
+                            今回はその中でも多機能なvue-chartjsを使ってみることにしました。</td>
                         <td class="c-tweet-table__cell">2019/01/22</td>
                         <td class="c-tweet-table__cell">99989898</td>
                         <td class="c-tweet-table__cell">99</td>
