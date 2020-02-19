@@ -71,6 +71,7 @@
   border: 1px $color-main solid;
   transition: 0.1s;
   font-size: $font-size-base;
+  background: #ffffff;
   &:hover {
     background: #d3d9fc;
   }
@@ -566,7 +567,7 @@
   &__input {
     display: inline-block;
     margin-bottom: $space-l;
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
   }
@@ -587,12 +588,12 @@
     box-sizing: border-box;
     width: 100%;
   }
-  &--checkbox{
-    &-wrapper{
+  &--checkbox {
+    &-wrapper {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      & label{
+      & label {
         font-size: $font-size-medium;
         user-select: none;
       }

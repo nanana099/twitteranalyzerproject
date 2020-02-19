@@ -354,6 +354,7 @@ p {
   -webkit-transition: 0.1s;
   transition: 0.1s;
   font-size: 1.6rem;
+  background: #ffffff;
 }
 
 .c-btn:hover {
