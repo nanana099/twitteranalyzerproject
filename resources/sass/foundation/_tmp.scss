@@ -90,7 +90,29 @@
     border-radius: 50px;
   }
 }
-
+//フッター
+.p-footer{
+  &__links{
+    padding-top: $space-l;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__link{
+    padding: $space-xs;
+    border-right: 1px solid $color-font;
+    font-size: $font-size-medium;
+    &:last-child{
+      border-right: none;
+    }
+  }
+}
+// コピーライト
+.c-copy{
+  font-size: $font-size-small;
+  padding: $space-l;
+  box-sizing: border-box;
+  text-align: center;
+}
 // セレクトボックス
 
 .c-select {

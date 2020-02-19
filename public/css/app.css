@@ -378,6 +378,31 @@ p {
   border-radius: 50px;
 }
 
+.p-footer__links {
+  padding-top: 30px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+}
+
+.p-footer__link {
+  padding: 5px;
+  border-right: 1px solid #1d1d1d;
+  font-size: 1.4rem;
+}
+
+.p-footer__link:last-child {
+  border-right: none;
+}
+
+.c-copy {
+  font-size: 1.2rem;
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
 .c-select {
   width: 200px;
   position: relative;
@@ -960,7 +985,6 @@ p {
 }
 
 #footer {
-  height: 84px;
   width: 100%;
   min-width: 960px;
   box-shadow: 0 -3px 8px -1px rgba(168, 168, 168, 0.95);
