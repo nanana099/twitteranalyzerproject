@@ -381,6 +381,89 @@
   }
 }
 
+// 画面半分のテーブル
+.c-half-table {
+  word-wrap: break-word;
+  font-size: $font-size-small;
+  width: 100%;
+  &-wrapper {
+    width: 48%;
+    display: inline-block;
+    margin-bottom: $space-l;
+    box-sizing: border-box;
+    &:nth-child(odd) {
+      margin-right: 3%;
+    }
+  }
+  &__header {
+    background: $color2-sub;
+  }
+  &__row{
+    border-bottom: 1px solid $color2-sub;
+  }
+  &__cell {
+    padding: $space-s $space-xs;
+    text-align: center;
+    line-height: 1.2;
+    &--left {
+      text-align: left;
+    }
+    &--between{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+  }
+  &__col-1 {
+    width: 80%;
+  }
+  &__col-2 {
+    width: 20%;
+  }
+}
+.piyo{
+  // ハーフテーブルのアイコンたち
+  display: inline-block;
+  margin-right: $space-xs;
+  &:last-child{
+    margin-right: 0;
+  }
+  &--disabled{
+    pointer-events: none; 
+    color: $color2-sub;
+  }
+}
+
+// 時間曜日テーブル
+.c-time-table{
+  width: 100%;
+  &__cell{
+    width: calc(100% / 26);
+    border: 1px solid $color2-sub;
+    padding: $space-xs;
+    text-align: center;
+    &--title{
+      border: none;
+    }
+    &--primary{
+      color: #ff5757;
+    }
+    &--sum{
+      &-all{
+        background: #fadaf8;
+      }
+      &-time{
+        background: #ecf5fb;
+      }
+      &-week{
+        background: #fbeced;
+      }
+    }
+  }
+}
+
+
 // クリックすると表示されるメニューのスイッチ
 /*ボックス全体*/
 .p-switchbox {

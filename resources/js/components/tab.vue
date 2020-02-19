@@ -23,11 +23,9 @@
         <tweet-list></tweet-list>
       </li>
       <li v-else-if="isActive == '2'">
-        <h1>テスト2</h1>
-        <p>
-          テスト本文2テスト本文2テスト本文2テスト本文2テスト本文2
-          <br />テスト本文2テスト本文2テスト本文2テスト本文2テスト本文2テスト本文2
-        </p>
+        <analytics-word v-bind:colName1="'名詞'" :colName2="'使用回数'"></analytics-word>
+        <analytics-word v-bind:colName1="'名詞'" :colName2="'使用回数'"></analytics-word>
+        <analytics-word v-bind:colName1="'名詞'" :colName2="'使用回数'"></analytics-word>
       </li>
       <li v-else-if="isActive == '3'">
         <h1>テスト3</h1>
@@ -38,34 +36,21 @@
       </li>
 
       <li v-else-if="isActive == '4'">
-        <h1>テスト4</h1>
-        <p>
-          テスト本文3テスト本文3テスト本文3テスト本文3テスト本文3
-          <br />テスト本文3テスト本文3テスト本文3テスト本文3テスト本文3テスト本文3
-        </p>
+        <analytics-post-time></analytics-post-time>
       </li>
-
+ 
       <li v-else-if="isActive == '5'">
-        <h1>テスト5</h1>
-        <p>
-          テスト本文3テスト本文3テスト本文3テスト本文3テスト本文3
-          <br />テスト本文3テスト本文3テスト本文3テスト本文3テスト本文3テスト本文3
-        </p>
+        <analytics-media></analytics-media>
       </li>
 
       <li v-else-if="isActive == '6'">
-        <h1>テスト6</h1>
-        <p>
-          テスト本文3テスト本文3テスト本文3テスト本文3テスト本文3
-          <br />テスト本文3テスト本文3テスト本文3テスト本文3テスト本文3テスト本文3
-        </p>
+        <analytics-reply v-bind:colName1="'リプライ先'" :colName2="'回数'"></analytics-reply>
+        <analytics-reply v-bind:colName1="'リプライ先'" :colName2="'回数'"></analytics-reply>
       </li>
       <li v-else-if="isActive == '7'">
-        <h1>テスト7</h1>
-        <p>
-          テスト本文3テスト本文3テスト本文3テスト本文3テスト本文3
-          <br />テスト本文3テスト本文3テスト本文3テスト本文3テスト本文3テスト本文3
-        </p>
+        
+        <analytics-hash-tag v-bind:colName1="'ハッシュタグ'" :colName2="'回数'"></analytics-hash-tag>
+        <analytics-hash-tag v-bind:colName1="'ハッシュタグ'" :colName2="'回数'"></analytics-hash-tag>
       </li>
 
       <li v-else-if="isActive == '8'">
@@ -82,10 +67,20 @@
 
 <script>
 import TweetList from "./tweetlist.vue";
+import AnalyticsPostTime from "./analyticsPostTime.vue";
+import AnalyticsMedia from "./analyticsMedia.vue";
+import AnalyticsWord from "./analyticsWord.vue";
+import AnalyticsReply from "./analyticsReply.vue";
+import AnalyticsHashTag from "./analyticsHashTag.vue";
 
 export default {
   components: {
     "tweet-list": TweetList,
+    "analytics-post-time": AnalyticsPostTime,
+    "analytics-media": AnalyticsMedia,
+    "analytics-word": AnalyticsWord,
+    "analytics-hash-tag": AnalyticsHashTag,
+    "analytics-reply": AnalyticsReply
   },
   data: function() {
     return {

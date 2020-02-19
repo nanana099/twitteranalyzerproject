@@ -692,6 +692,104 @@ p {
   border-bottom: 1px dashed #8697fb;
 }
 
+.c-half-table {
+  word-wrap: break-word;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.c-half-table-wrapper {
+  width: 48%;
+  display: inline-block;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+
+.c-half-table-wrapper:nth-child(odd) {
+  margin-right: 3%;
+}
+
+.c-half-table__header {
+  background: #e1e2e3;
+}
+
+.c-half-table__row {
+  border-bottom: 1px solid #e1e2e3;
+}
+
+.c-half-table__cell {
+  padding: 10px 5px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.c-half-table__cell--left {
+  text-align: left;
+}
+
+.c-half-table__cell--between {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
+  flex-wrap: nowrap;
+}
+
+.c-half-table__col-1 {
+  width: 80%;
+}
+
+.c-half-table__col-2 {
+  width: 20%;
+}
+
+.piyo {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.piyo:last-child {
+  margin-right: 0;
+}
+
+.piyo--disabled {
+  pointer-events: none;
+  color: #e1e2e3;
+}
+
+.c-time-table {
+  width: 100%;
+}
+
+.c-time-table__cell {
+  width: calc(100% / 26);
+  border: 1px solid #e1e2e3;
+  padding: 5px;
+  text-align: center;
+}
+
+.c-time-table__cell--title {
+  border: none;
+}
+
+.c-time-table__cell--primary {
+  color: #ff5757;
+}
+
+.c-time-table__cell--sum-all {
+  background: #fadaf8;
+}
+
+.c-time-table__cell--sum-time {
+  background: #ecf5fb;
+}
+
+.c-time-table__cell--sum-week {
+  background: #fbeced;
+}
+
 /*ボックス全体*/
 
 .p-switchbox {
