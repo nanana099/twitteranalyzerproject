@@ -1941,6 +1941,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _tweetlist_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tweetlist.vue */ "./resources/js/components/tweetlist.vue");
 //
 //
 //
@@ -1996,6 +1997,56 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    "tweet-list": _tweetlist_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  data: function data() {
+    return {
+      isActive: 1
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/tweetlist.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/tweetlist.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 //
 //
 //
@@ -2058,8 +2109,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      isActive: 1
+      num: 10
     };
+  },
+  created: function created() {
+    console.log("piyo");
   }
 });
 
@@ -38292,144 +38346,26 @@ var render = function() {
     _vm._v(" "),
     _c("ul", { attrs: { id: "contents" } }, [
       _vm.isActive == "1"
-        ? _c("li", [_c("h1", [_vm._v("テスト")]), _vm._v(" "), _vm._m(0)])
+        ? _c("li", [_c("tweet-list")], 1)
         : _vm.isActive == "2"
-        ? _c("li", [_c("h1", [_vm._v("テスト2")]), _vm._v(" "), _vm._m(1)])
+        ? _c("li", [_c("h1", [_vm._v("テスト2")]), _vm._v(" "), _vm._m(0)])
         : _vm.isActive == "3"
-        ? _c("li", [_c("h1", [_vm._v("テスト3")]), _vm._v(" "), _vm._m(2)])
+        ? _c("li", [_c("h1", [_vm._v("テスト3")]), _vm._v(" "), _vm._m(1)])
         : _vm.isActive == "4"
-        ? _c("li", [_c("h1", [_vm._v("テスト4")]), _vm._v(" "), _vm._m(3)])
+        ? _c("li", [_c("h1", [_vm._v("テスト4")]), _vm._v(" "), _vm._m(2)])
         : _vm.isActive == "5"
-        ? _c("li", [_c("h1", [_vm._v("テスト5")]), _vm._v(" "), _vm._m(4)])
+        ? _c("li", [_c("h1", [_vm._v("テスト5")]), _vm._v(" "), _vm._m(3)])
         : _vm.isActive == "6"
-        ? _c("li", [_c("h1", [_vm._v("テスト6")]), _vm._v(" "), _vm._m(5)])
+        ? _c("li", [_c("h1", [_vm._v("テスト6")]), _vm._v(" "), _vm._m(4)])
         : _vm.isActive == "7"
-        ? _c("li", [_c("h1", [_vm._v("テスト7")]), _vm._v(" "), _vm._m(6)])
+        ? _c("li", [_c("h1", [_vm._v("テスト7")]), _vm._v(" "), _vm._m(5)])
         : _vm.isActive == "8"
-        ? _c("li", [_c("h1", [_vm._v("テスト8")]), _vm._v(" "), _vm._m(7)])
+        ? _c("li", [_c("h1", [_vm._v("テスト8")]), _vm._v(" "), _vm._m(6)])
         : _vm._e()
     ])
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _vm._v(
-        "\n        テスト本文テスト本文テスト本文テスト本文テスト本文\n        テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        v\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n        "
-      ),
-      _c("br"),
-      _vm._v(
-        "テスト本文テスト本文テスト本文テスト本文テスト本文テスト本文\n      "
-      )
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -38526,6 +38462,237 @@ var staticRenderFns = [
       _vm._v(
         "テスト本文3テスト本文3テスト本文3テスト本文3テスト本文3テスト本文3\n      "
       )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/tweetlist.vue?vue&type=template&id=4379f154&":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/tweetlist.vue?vue&type=template&id=4379f154& ***!
+  \************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "c-tweet-table-wrapper" }, [
+    _c(
+      "table",
+      { staticClass: "c-tweet-table" },
+      [
+        _vm._m(0),
+        _vm._v(" "),
+        _vm._l(_vm.num, function(n) {
+          return _c("tbody", { key: n, staticClass: "c-tweet-table__body" }, [
+            _vm._m(1, true)
+          ])
+        })
+      ],
+      2
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "c-tweet-table__header" }, [
+      _c("tr", [
+        _c(
+          "th",
+          {
+            staticClass:
+              "c-tweet-table__cell c-tweet-table__cell--header c-tweet-table__col-1"
+          },
+          [_vm._v("投稿内容")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "c-tweet-table__cell c-tweet-table__cell--header c-tweet-table__col-2"
+          },
+          [_vm._v("投稿日時")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "c-tweet-table__cell c-tweet-table__cell--header c-tweet-table__col-2"
+          },
+          [_vm._v("インプレッション数")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "c-tweet-table__cell c-tweet-table__cell--header c-tweet-table__col-2"
+          },
+          [_vm._v("エンゲージ数")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "c-tweet-table__cell c-tweet-table__cell--header c-tweet-table__col-3"
+          },
+          [_vm._v("エンゲージ率")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "c-tweet-table__cell c-tweet-table__cell--header c-tweet-table__col-2"
+          },
+          [_vm._v("エンゲージ数")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "c-tweet-table__cell c-tweet-table__cell--header c-tweet-table__col-3"
+          },
+          [_vm._v("エンゲージ率")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "c-tweet-table__cell c-tweet-table__cell--header c-tweet-table__col-2"
+          },
+          [_vm._v("エンゲージ数")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "c-tweet-table__cell c-tweet-table__cell--header c-tweet-table__col-3"
+          },
+          [_vm._v("エンゲージ率")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "c-tweet-table__cell c-tweet-table__cell--header c-tweet-table__col-2"
+          },
+          [_vm._v("エンゲージ数")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "c-tweet-table__cell c-tweet-table__cell--header c-tweet-table__col-3"
+          },
+          [_vm._v("エンゲージ率")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "c-tweet-table__cell c-tweet-table__cell--header c-tweet-table__col-2"
+          },
+          [_vm._v("エンゲージ数")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "c-tweet-table__cell c-tweet-table__cell--header c-tweet-table__col-3"
+          },
+          [_vm._v("エンゲージ率")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "c-tweet-table__cell c-tweet-table__cell--header c-tweet-table__col-2"
+          },
+          [_vm._v("エンゲージ数")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "c-tweet-table__cell c-tweet-table__cell--header c-tweet-table__col-3"
+          },
+          [_vm._v("エンゲージ率")]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", { staticClass: "c-tweet-table__row" }, [
+      _c(
+        "td",
+        { staticClass: "c-tweet-table__cell c-tweet-table__cell--left" },
+        [
+          _vm._v(
+            "\n          開業届と青色申告申請書簡単につくれたー。\n          "
+          ),
+          _c("br"),
+          _vm._v(
+            "無料で記入済み書類のpdf作成までしてくれるので、とりあえず書類つくるだけでもオススメです。\n        "
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c("td", { staticClass: "c-tweet-table__cell" }, [_vm._v("2019/01/22")]),
+      _vm._v(" "),
+      _c("td", { staticClass: "c-tweet-table__cell" }, [_vm._v("99989898")]),
+      _vm._v(" "),
+      _c("td", { staticClass: "c-tweet-table__cell" }, [_vm._v("99")]),
+      _vm._v(" "),
+      _c("td", { staticClass: "c-tweet-table__cell" }, [_vm._v("0.2")]),
+      _vm._v(" "),
+      _c("td", { staticClass: "c-tweet-table__cell" }, [_vm._v("0.2")]),
+      _vm._v(" "),
+      _c("td", { staticClass: "c-tweet-table__cell" }, [_vm._v("1929")]),
+      _vm._v(" "),
+      _c("td", { staticClass: "c-tweet-table__cell" }, [_vm._v("99")]),
+      _vm._v(" "),
+      _c("td", { staticClass: "c-tweet-table__cell" }, [_vm._v("1929")]),
+      _vm._v(" "),
+      _c("td", { staticClass: "c-tweet-table__cell" }, [_vm._v("0.2")]),
+      _vm._v(" "),
+      _c("td", { staticClass: "c-tweet-table__cell" }, [_vm._v("1929")]),
+      _vm._v(" "),
+      _c("td", { staticClass: "c-tweet-table__cell" }, [_vm._v("0.2")]),
+      _vm._v(" "),
+      _c("td", { staticClass: "c-tweet-table__cell" }, [_vm._v("1929")]),
+      _vm._v(" "),
+      _c("td", { staticClass: "c-tweet-table__cell" }, [_vm._v("0.2")]),
+      _vm._v(" "),
+      _c("td", { staticClass: "c-tweet-table__cell" }, [_vm._v("1929")])
     ])
   }
 ]
@@ -50927,6 +51094,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_tab_vue_vue_type_template_id_55e7ed1a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_tab_vue_vue_type_template_id_55e7ed1a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/tweetlist.vue":
+/*!***********************************************!*\
+  !*** ./resources/js/components/tweetlist.vue ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _tweetlist_vue_vue_type_template_id_4379f154___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tweetlist.vue?vue&type=template&id=4379f154& */ "./resources/js/components/tweetlist.vue?vue&type=template&id=4379f154&");
+/* harmony import */ var _tweetlist_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tweetlist.vue?vue&type=script&lang=js& */ "./resources/js/components/tweetlist.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _tweetlist_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _tweetlist_vue_vue_type_template_id_4379f154___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _tweetlist_vue_vue_type_template_id_4379f154___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/tweetlist.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/tweetlist.vue?vue&type=script&lang=js&":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/tweetlist.vue?vue&type=script&lang=js& ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_tweetlist_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./tweetlist.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/tweetlist.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_tweetlist_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/tweetlist.vue?vue&type=template&id=4379f154&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/tweetlist.vue?vue&type=template&id=4379f154& ***!
+  \******************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_tweetlist_vue_vue_type_template_id_4379f154___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./tweetlist.vue?vue&type=template&id=4379f154& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/tweetlist.vue?vue&type=template&id=4379f154&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_tweetlist_vue_vue_type_template_id_4379f154___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_tweetlist_vue_vue_type_template_id_4379f154___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
