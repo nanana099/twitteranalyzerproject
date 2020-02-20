@@ -14,7 +14,7 @@
 // ログインが不要なルート
 
 // 認証系
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -37,7 +37,7 @@ Route::get('plane/tokusho/show', 'PlaneTextController@showTokusho')->name('tokus
 Route::get('plane/privacy/show', 'PlaneTextController@showPrivacyPolicy')->name('privacy.show'); ;        // プライバシーポリシー
 
 // ログインが必要なルート
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['verified'])->group(function () {
     // １．Twitterアカウントの登録
     Route::get('twitteraccount/callback', 'TwitterAccountController@callback'); // TwitterAPIからのコールバック
     // ２．ツイートデータ読み込み画面
