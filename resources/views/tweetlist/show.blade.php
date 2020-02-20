@@ -16,7 +16,7 @@
                     <option value="">2019/11</option>
                 </select>
             </div>
-            <button class="c-btn c-btn--primary c-btn--circle">列の設定</button>
+            <button class="c-btn c-btn--circle">列の設定</button>
         </div>
     </section>
     <section class="c-section">
