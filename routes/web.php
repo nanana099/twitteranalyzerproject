@@ -22,10 +22,9 @@ Route::get('/', function () {
     if (Auth::check()) {
         return redirect()->route('registtweet.show');
     } else {
-        return view('welcome');
+        return redirect()->route('login');
     }
 });
-
 
 // ６．連絡
 Route::get('contact/inquiry/show', 'ContactController@showInquiry')->name('inquiry.show');       // お問い合わせ
