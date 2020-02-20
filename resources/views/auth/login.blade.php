@@ -2,7 +2,7 @@
 
 @section('content')
 <section class="c-site-width">
-    <h1 class="c-page-title">ログイン</i></h1>
+    <h1 class="c-h1">ログイン</h1>
     <section class="c-section">
 
         <form method="POST" action="{{ route('login') }}">

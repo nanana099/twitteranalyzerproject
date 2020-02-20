@@ -2,7 +2,7 @@
 
 @section('content')
 <section class="c-site-width">
-    <h1 class="c-page-title">過去のツイート一覧 <i class="fas fa-list-ul"></i></h1>
+    <h1 class="c-h1">過去のツイート一覧 <i class="fas fa-list-ul"></i></h1>
     <section class="c-section">
         <div class="p-tweetlist__inputs">
             <div class="c-select-wrap p-tweetlist__inputs-item">

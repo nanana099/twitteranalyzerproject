@@ -445,11 +445,30 @@ p {
   margin-bottom: 100px;
 }
 
-.c-page-title {
+.c-h1 {
   font-size: 2.2rem;
   border-left: 4px solid #2c4bff;
   padding: 5px 10px;
   margin-bottom: 50px;
+}
+
+.c-h2 {
+  font-size: 1.8rem;
+  padding: 5px 10px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.c-list--bullet {
+  margin-left: 40px;
+  width: 100%;
+}
+
+.c-list__item--bullet {
+  list-style: outside;
+  margin-bottom: 10px;
+  width: 100%;
+  word-wrap: break-word;
 }
 
 .p-registtweet__steps-wrapper {
@@ -965,6 +984,19 @@ p {
   font-size: 16px;
   box-sizing: border-box;
   width: 100%;
+}
+
+.c-input--textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #222;
+  font-size: 16px;
+  outline: none;
+  padding: 13px 16px;
+  resize: vertical;
+  vertical-align: middle;
 }
 
 .c-input--checkbox-wrapper {

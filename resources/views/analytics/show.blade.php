@@ -2,7 +2,7 @@
 
 @section('content')
 <section class="c-site-width">
-    <h1 class="c-page-title">ツイートを分析する <i class="fas fa-chart-bar"></i></h1>
+    <h1 class="c-h1">ツイートを分析する <i class="fas fa-chart-bar"></i></h1>
     <section class="c-section">
         <div class="p-tweetanal__howtolink-wrapper">
             <a href="" target="_blank" class="p-tweetanal__howtolink">分析方法の一例を見てみる &gt;&gt;</a>

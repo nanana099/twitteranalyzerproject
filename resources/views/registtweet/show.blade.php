@@ -2,7 +2,7 @@
 
 @section('content')
 <section class="c-site-width">
-    <h1 class="c-page-title">ツイートのデータを登録 <i class="fas fa-upload"></i></h1>
+    <h1 class="c-h1">ツイートのデータを登録 <i class="fas fa-upload"></i></h1>
     <section class="c-section">
         <div class="p-registtweet__steps-wrapper">
             <img src="{{ asset('/images/steps.png') }}" alt="a" class="p-registtweet__steps">
