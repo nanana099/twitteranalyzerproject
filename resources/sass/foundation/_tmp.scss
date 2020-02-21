@@ -314,6 +314,11 @@
   &__inputs {
     display: flex;
     justify-content: flex-end;
+    margin-bottom: $space-l;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
     &-item {
       margin-right: $space-m;
       &:last-child {

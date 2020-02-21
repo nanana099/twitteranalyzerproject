@@ -25,8 +25,8 @@
           </select>
         </div>
         <button class="c-btn c-btn--circle c-btn--primary p-tweetlist__inputs-item">再表示</button>
+        <button class="c-btn c-btn--circle">列の設定</button>
       </div>
-      <button class="c-btn c-btn--circle">列の設定</button>
     </section>
     <section class="c-section">
       <div class="c-tweet-table-wrapper">

@@ -74685,10 +74685,12 @@ var staticRenderFns = [
               "c-btn c-btn--circle c-btn--primary p-tweetlist__inputs-item"
           },
           [_vm._v("再表示")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("button", { staticClass: "c-btn c-btn--circle" }, [_vm._v("列の設定")])
+        ),
+        _vm._v(" "),
+        _c("button", { staticClass: "c-btn c-btn--circle" }, [
+          _vm._v("列の設定")
+        ])
+      ])
     ])
   },
   function() {

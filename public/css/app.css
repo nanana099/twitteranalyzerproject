@@ -588,6 +588,11 @@ p {
 .p-tweetlist__inputs {
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+.p-tweetlist__inputs:last-child {
+  margin-bottom: 0;
 }
 
 .p-tweetlist__inputs-item {
