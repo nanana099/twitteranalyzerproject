@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Services\CSVimporter;
+use App\Services\TwitterAnalyticsCSV;
+use App\Tweet;
 
 class RegistTweetController extends Controller
 {
@@ -10,11 +13,10 @@ class RegistTweetController extends Controller
         return view('registtweet.show');
     }
     public function upsert(Request $request){
-        logger($request->file());
-        logger($request);
+        $csvImporter = new CSVimporter(new TwitterAnalyticsCSV());
         foreach($request['files'] as $val){
-            logger($val);
+            $oneCsvFileContentArray = $csvImporter->import($val);
+            Tweet::insert($oneCsvFileContentArray);
         }
-
     }
 }
