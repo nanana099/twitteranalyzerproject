@@ -22,6 +22,7 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('tab', require('./components/tab.vue').default);
 Vue.component('file-uploader', require('./components/fileUploader.vue').default);
+Vue.component('tweet-list', require('./tweetlist.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

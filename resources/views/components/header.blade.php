@@ -17,11 +17,11 @@
 
                 <li class="c-gnav__item">
                     {{-- アカウント --}}
-                    @if(false)
-                    <a href="" class="c-gnav__link">
+                    @if(true)
+                    <a href="/twitteraccount/add" class="c-gnav__link">
                         <div class="p-header__twiicon">Click!
-                            {{-- <div class="c-fukidasi c-fukidasi--anime">アカウントを追加してください
-                            </div> --}}
+                            <div class="c-fukidasi c-fukidasi--anime">アカウントを追加してください
+                            </div>
                         </div>
                     </a>
                     @else

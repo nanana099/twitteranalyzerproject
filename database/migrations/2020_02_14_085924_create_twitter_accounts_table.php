@@ -18,6 +18,7 @@ class CreateTwitterAccountsTable extends Migration
             $table->string('twitter_user_id');
             $table->string('screen_name');
             $table->string('image');
+            $table->string('access_token');
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
             

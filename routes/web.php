@@ -38,6 +38,7 @@ Route::get('plane/privacy/show', 'PlaneTextController@showPrivacyPolicy')->name(
 // ログインが必要なルート
 Route::middleware(['verified'])->group(function () {
     // １．Twitterアカウントの登録
+    Route::get('twitteraccount/add', 'TwitterAccountController@add'); // Twitterアカウントの追加
     Route::get('twitteraccount/callback', 'TwitterAccountController@callback'); // TwitterAPIからのコールバック
     // ２．ツイートデータ読み込み画面
     Route::get('registtweet/show', 'RegistTweetController@show')->name('registtweet.show'); // ツイートデータ登録画面を表示
@@ -55,4 +56,8 @@ Route::middleware(['verified'])->group(function () {
     // ７．ヘルプ関連
     Route::get('help/qa/show', 'HelpController@showQA');                        // QA画面
     Route::get('help/example/show', 'HelpController@showExample');              // 使い方の例
+
+    // 非同期操作用
+    Route::get('tweet/get', 'TweetController@get');                   //ツイート一覧の取得
+
 });
