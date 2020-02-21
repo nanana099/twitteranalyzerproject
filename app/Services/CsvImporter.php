@@ -16,6 +16,14 @@ class CSVimporter
         $this->csvDefineTitle = $this->csvDefine->getTitleRow();
     }
 
+    private function getRate($bunsi, $bunbo = 1)
+    {
+        if ($bunbo <= 0) {
+            return 0;
+        } else {
+            return $bunsi * 100 / $bunbo;
+        }
+    }
     // ファイルの絶対パスを引数
     public function import($filePath)
     {
@@ -54,7 +62,7 @@ class CSVimporter
         
             // 1行目のヘッダーは取り込まない
             if ($row_count > 1) {
-                // Todo:列名と値の対応
+                // Todo:列名と値の対応（プロも）
                 // Todo:この辺の定義を別クラスに切り出す
                 $csvimport_array = [
                     "twitter_account_id" => 1,
@@ -63,37 +71,37 @@ class CSVimporter
                     "posted_at"=> (new Carbon($row[3]))->addHour(9),
                     "impression_num" => $row[4],
                     "engage_num" => $row[5],
-                    "engage_rate" => $row[5],
-                    "retweet_num" => $row[5],
-                    "retweet_rate" => $row[5],
-                    "reply_num" => $row[5],
-                    "reply_rate" => $row[5],
-                    "like_num" => $row[5],
-                    "like_rate" => $row[5],
-                    "prof_click_num" => $row[5],
-                    "prof_click_rate" => $row[5],
-                    "url_click_num" => $row[5],
-                    "url_click_rate" => $row[5],
-                    "hash_click_num" => $row[5],
-                    "hash_click_rate" => $row[5],
-                    "detail_click_num" => $row[5],
-                    "detail_click_rate" => $row[5],
-                    "fixed_link_click_num" => $row[5],
-                    "fixed_link_click_rate" => $row[5],
-                    "app_show_num" => $row[5],
-                    "app_show_rate" => $row[5],
-                    "app_inst_num" => $row[5],
-                    "app_inst_rate" => $row[5],
-                    "following_num" => $row[5],
-                    "following_rate" => $row[5],
-                    "tweet_mail_num" => $row[5],
-                    "tweet_mail_rate" => $row[5],
-                    "dial_tel_num" => $row[5],
-                    "dial_tel_rate" => $row[5],
-                    "media_play_num" => $row[5],
-                    "media_play_rate" => $row[5],
-                    "medhi_engage_num" => $row[5],
-                    "medhi_engage_rate" => $row[5],
+                    "engage_rate" => $this::getRate($row[6]),
+                    "retweet_num" => $row[7],
+                    "retweet_rate" => $this::getRate($row[7], $row[4]),
+                    "reply_num" => $row[8],
+                    "reply_rate" =>  $this::getRate($row[8], $row[4]),
+                    "like_num" => $row[9],
+                    "like_rate" => $this::getRate($row[9], $row[4]),
+                    "prof_click_num" => $row[10],
+                    "prof_click_rate" => $this::getRate($row[10], $row[4]),
+                    "url_click_num" => $row[11],
+                    "url_click_rate" => $this::getRate($row[11], $row[4]),
+                    "hash_click_num" => $row[12],
+                    "hash_click_rate" => $this::getRate($row[12], $row[4]),
+                    "detail_click_num" => $row[13],
+                    "detail_click_rate" => $this::getRate($row[13], $row[4]),
+                    "fixed_link_click_num" => $row[14],
+                    "fixed_link_click_rate" => $this::getRate($row[14], $row[4]),
+                    "app_show_num" => $row[15],
+                    "app_show_rate" => $this::getRate($row[15], $row[4]),
+                    "app_inst_num" => $row[16],
+                    "app_inst_rate" => $this::getRate($row[16], $row[4]),
+                    "following_num" => $row[17],
+                    "following_rate" => $this::getRate($row[17], $row[4]),
+                    "tweet_mail_num" => $row[18],
+                    "tweet_mail_rate" => $this::getRate($row[18], $row[4]),
+                    "dial_tel_num" => $row[19],
+                    "dial_tel_rate" => $this::getRate($row[19], $row[4]),
+                    "media_play_num" => $row[20],
+                    "media_play_rate" => $this::getRate($row[20], $row[4]),
+                    "medhi_engage_num" => $row[21],
+                    "medhi_engage_rate" =>$this::getRate($row[21], $row[4]),
                     // "promo_impression_num",
                     // "promo_engage_num",
                     // "promo_engage_rate",
