@@ -15,41 +15,7 @@
         </div>
     </section>
     <section class="c-section">
-        <form action="">
-            <div class="p-registtweet__upload-file-area">
-                <p>
-                    ドラッグ＆ドロップ
-                    <br>
-                    またはクリックしてアップロード
-                </p>
-                <input type="file" name="" class="p-registtweet__upload-file-input" id="">
-            </div>
-            <div class="p-registtweet__uploaded-file-area">
-                {{-- ファイルが選択されていません --}}
-
-                <div class="p-registtweet__uploaded-file-item">
-                    <span class="">tweet_activity_metrics_Arknanana_20200107_20200204_ja.csv</span>
-                    <span class="p-registtweet__uploaded-file-item-delete-button">
-                        <div class="c-btn--batu"><span></span></div>
-                    </span>
-                </div>
-
-                <div class="p-registtweet__uploaded-file-item">
-                    <span class="">tweet_activity_metrics_Arknanana_20200107_20200204_ja.csv</span>
-                    <span class="p-registtweet__uploaded-file-item-delete-button">
-                        <div class="c-btn--batu"><span></span></div>
-                    </span>
-                </div>
-
-                <div class="p-registtweet__uploaded-file-item">
-                    <span class="">tweet_activity_metrics_Arknanana_20200107_20200204_ja.csv</span>
-                    <span class="p-registtweet__uploaded-file-item-delete-button">
-                        <div class="c-btn--batu"><span></span></div>
-                    </span>
-                </div>
-            </div>
-            <button class="c-btn c-btn--primary p-registtweet__upload-btn">登録する &gt;</button>
-        </form>
+        <file-uploader></file-uploader>       
     </section>
 </section>
 @endsection

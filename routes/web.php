@@ -41,7 +41,7 @@ Route::middleware(['verified'])->group(function () {
     Route::get('twitteraccount/callback', 'TwitterAccountController@callback'); // TwitterAPIからのコールバック
     // ２．ツイートデータ読み込み画面
     Route::get('registtweet/show', 'RegistTweetController@show')->name('registtweet.show'); // ツイートデータ登録画面を表示
-    Route::post('registtweet/post', 'RegistTweetController@upsert');            // ツイートデータを更新
+    Route::post('registtweet/post', 'RegistTweetController@upsert');                        // ツイートデータを更新
     // ３．過去のツイート一覧画面
     Route::get('tweetlist/show', 'TweetListController@show')->name('tweetlist.show');                   //過去ツイート一覧を表示
     // ４．分析画面
