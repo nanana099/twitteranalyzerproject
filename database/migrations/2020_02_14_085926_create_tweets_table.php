@@ -85,7 +85,8 @@ class CreateTweetsTable extends Migration
             $table->float('promo_media_play_rate')->nullable();
             $table->float('promo_medhi_engage_num')->nullable();
             $table->float('promo_medhi_engage_rate')->nullable();
-
+            
+            $table->unique('twitter_tweet_id');
             $table->foreign('twitter_account_id')->references('id')->on('twitter_accounts');
         });
     }
