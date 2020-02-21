@@ -2520,6 +2520,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "FileInput",
@@ -2528,7 +2534,8 @@ __webpack_require__.r(__webpack_exports__);
     return {
       file: [],
       error: "",
-      inArea: false
+      inArea: false,
+      isUploading: false
     };
   },
   computed: {
@@ -2588,7 +2595,13 @@ __webpack_require__.r(__webpack_exports__);
         fmData.append("files[]", this.file[i]);
       }
 
-      axios.post("/registtweet/post", fmData);
+      var that = this;
+      that.isUploading = true;
+      axios.post("/registtweet/post", fmData).then(function (responce) {
+        that.isUploading = false;
+      })["catch"](function (error) {
+        that.isUploading = false;
+      });
     }
   }
 });
@@ -73813,7 +73826,17 @@ var render = function() {
     _c(
       "button",
       {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: !_vm.isUploading,
+            expression: "!isUploading"
+          }
+        ],
         staticClass: "c-btn c-btn--primary p-registtweet__upload-btn",
+        class: { "c-btn--disable": !_vm.isSelected },
+        attrs: { disabled: !_vm.isSelected },
         on: { click: _vm.uploadFiles }
       },
       [_vm._v("登録する >")]

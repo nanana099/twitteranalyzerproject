@@ -370,6 +370,19 @@ p {
   background: #14247c;
 }
 
+.c-btn--disable {
+  background-image: none;
+  background-color: #ccc;
+  border-color: #ccc;
+  cursor: default;
+}
+
+.c-btn--disable:hover {
+  background-image: none;
+  background-color: #ccc;
+  border-color: #ccc;
+}
+
 .c-btn--square {
   border-radius: 5px;
 }

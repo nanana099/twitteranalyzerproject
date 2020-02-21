@@ -82,7 +82,17 @@
       background: #14247c;
     }
   }
-
+  &--disable {
+    background-image: none;
+    background-color: #ccc;
+    border-color: #ccc;
+    cursor: default;
+    &:hover {
+      background-image: none;
+      background-color: #ccc;
+      border-color: #ccc;
+    }
+  }
   &--square {
     border-radius: 5px;
   }
@@ -222,13 +232,13 @@
         opacity: 0;
         cursor: pointer;
         display: none;
-        &-label{
+        &-label {
           display: flex;
           justify-content: center;
           align-items: center;
           cursor: pointer;
           width: 100%;
-          height: 100%;;
+          height: 100%;
         }
       }
     }
@@ -260,7 +270,7 @@
       border-bottom: 1px solid $color-sub;
       margin-bottom: $space-s;
       box-sizing: border-box;
-      &:last-child{
+      &:last-child {
         padding-bottom: 0;
         margin-bottom: 0;
         border-bottom: none;

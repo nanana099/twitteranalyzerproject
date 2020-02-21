@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div>
     <!-- アップロードボックス -->
     <p class="c-error-msg" v-show="isError">csv ファイルのみアップロード可能です</p>
     <div
@@ -43,7 +43,13 @@
     </div>
 
     <!-- 登録ボタン -->
-    <button class="c-btn c-btn--primary p-registtweet__upload-btn" @click="uploadFiles">登録する &gt;</button>
+    <button
+      class="c-btn c-btn--primary p-registtweet__upload-btn"
+      :class="{'c-btn--disable':!isSelected}"
+      :disabled="!isSelected"
+      @click="uploadFiles"
+      v-show="!isUploading"
+    >登録する &gt;</button>
   </div>
 </template>
 
@@ -58,7 +64,8 @@ export default {
     return {
       file: [],
       error: "",
-      inArea: false
+      inArea: false,
+      isUploading: false
     };
   },
 
@@ -118,7 +125,17 @@ export default {
       for (let i = 0; i < this.file.length; i++) {
         fmData.append("files[]", this.file[i]);
       }
-      axios.post("/registtweet/post",fmData);
+
+      let that = this;
+      that.isUploading = true;
+      axios
+        .post("/registtweet/post", fmData)
+        .then(function(responce) {
+          that.isUploading = false;
+        })
+        .catch(function(error) {
+          that.isUploading = false;
+        });
     }
   }
 };
