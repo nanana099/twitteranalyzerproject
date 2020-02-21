@@ -13,8 +13,20 @@
             <option value>2019/11</option>
           </select>
         </div>
-        <button class="c-btn c-btn--circle">列の設定</button>
+        <div class="c-select-wrap p-tweetlist__inputs-item">
+          <i class="fas fa-angle-down c-select-arrow"></i>
+          <select name id class="c-select">
+            <option value>いいね数順</option>
+            <option value selected>いいね率順</option>
+            <option value>いいね数順</option>
+            <option value>いいね数順</option>
+            <option value>いいね数順</option>
+            <option value>いいね数順</option>
+          </select>
+        </div>
+        <button class="c-btn c-btn--circle c-btn--primary p-tweetlist__inputs-item">再表示</button>
       </div>
+      <button class="c-btn c-btn--circle">列の設定</button>
     </section>
     <section class="c-section">
       <div class="c-tweet-table-wrapper">
@@ -70,7 +82,12 @@
             </tr>
           </thead>
           <tbody class="c-tweet-table__body">
-            <tr class="c-tweet-table__row" v-for="(tweet,index) in tweets" :key="index" style="white-space:pre-wrap; word-wrap:break-word;">
+            <tr
+              class="c-tweet-table__row"
+              v-for="(tweet,index) in tweets"
+              :key="index"
+              style="white-space:pre-wrap; word-wrap:break-word;"
+            >
               <td class="c-tweet-table__cell c-tweet-table__cell--left">{{tweet.content}}</td>
               <td class="c-tweet-table__cell">{{tweet.posted_at}}</td>
               <td class="c-tweet-table__cell">{{tweet.impression_num}}</td>

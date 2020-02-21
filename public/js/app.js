@@ -2931,6 +2931,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -23652,7 +23669,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\nbody[data-v-55e7ed1a] {\n  font-size: 16px;\n}\nul[data-v-55e7ed1a] {\n  padding: 0;\n  margin: 0;\n}\nli[data-v-55e7ed1a] {\n  list-style: none;\n}\nh1[data-v-55e7ed1a] {\n  font-size: 16px;\n  margin: 0;\n}\np[data-v-55e7ed1a] {\n  margin: 0;\n  font-size: 15px;\n}\n#tabs[data-v-55e7ed1a] {\n  overflow: hidden;\n}\n#tabs input[data-v-55e7ed1a] {\n  display: none;\n}\n#tabs label[data-v-55e7ed1a] {\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  display: inline-block;\n  text-align: center;\n  padding: 10px 10px;\n  cursor: pointer;\n  background: #fdfdfd;\n  border: 2px solid #2c4bff;\n  border-bottom: none;\n  -webkit-transition: 0.1s;\n  transition: 0.1s;\n  border-radius: 10px 10px 0 0;\n}\n#tabs input:checked + label[data-v-55e7ed1a],\n#tabs label[data-v-55e7ed1a]:hover {\n  background: #2c4bff;\n  color: #fff;\n  -webkit-transition: 0.1s;\n  transition: 0.1s;\n}\n#tabs input:checked + label[data-v-55e7ed1a] {\n  cursor: default;\n}\n#contents[data-v-55e7ed1a] {\n  width: 100%;\n  min-height: 65vh;\n  padding-top: 50px;\n  border-top: 2px solid #2c4bff;\n}\n", ""]);
+exports.push([module.i, "\nbody[data-v-55e7ed1a] {\n  font-size: 16px;\n}\nul[data-v-55e7ed1a] {\n  padding: 0;\n  margin: 0;\n}\nli[data-v-55e7ed1a] {\n  list-style: none;\n}\nh1[data-v-55e7ed1a] {\n  font-size: 16px;\n  margin: 0;\n}\np[data-v-55e7ed1a] {\n  margin: 0;\n  font-size: 15px;\n}\n#tabs[data-v-55e7ed1a] {\n  overflow: hidden;\n}\n#tabs input[data-v-55e7ed1a] {\n  display: none;\n}\n#tabs label[data-v-55e7ed1a] {\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  display: inline-block;\n  text-align: center;\n  padding: 10px 10px;\n  cursor: pointer;\n  background: #fdfdfd;\n  border: 2px solid #2c4bff;\n  border-bottom: none;\n  transition: 0.1s;\n  border-radius: 10px 10px 0 0;\n}\n#tabs input:checked + label[data-v-55e7ed1a],\n#tabs label[data-v-55e7ed1a]:hover {\n  background: #2c4bff;\n  color: #fff;\n  transition: 0.1s;\n}\n#tabs input:checked + label[data-v-55e7ed1a] {\n  cursor: default;\n}\n#contents[data-v-55e7ed1a] {\n  width: 100%;\n  min-height: 65vh;\n  padding-top: 50px;\n  border-top: 2px solid #2c4bff;\n}\n", ""]);
 
 // exports
 
@@ -74637,10 +74654,41 @@ var staticRenderFns = [
           )
         ]),
         _vm._v(" "),
-        _c("button", { staticClass: "c-btn c-btn--circle" }, [
-          _vm._v("列の設定")
-        ])
-      ])
+        _c("div", { staticClass: "c-select-wrap p-tweetlist__inputs-item" }, [
+          _c("i", { staticClass: "fas fa-angle-down c-select-arrow" }),
+          _vm._v(" "),
+          _c(
+            "select",
+            { staticClass: "c-select", attrs: { name: "", id: "" } },
+            [
+              _c("option", { attrs: { value: "" } }, [_vm._v("いいね数順")]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "", selected: "" } }, [
+                _vm._v("いいね率順")
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "" } }, [_vm._v("いいね数順")]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "" } }, [_vm._v("いいね数順")]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "" } }, [_vm._v("いいね数順")]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "" } }, [_vm._v("いいね数順")])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass:
+              "c-btn c-btn--circle c-btn--primary p-tweetlist__inputs-item"
+          },
+          [_vm._v("再表示")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("button", { staticClass: "c-btn c-btn--circle" }, [_vm._v("列の設定")])
     ])
   },
   function() {

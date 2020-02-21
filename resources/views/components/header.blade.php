@@ -17,7 +17,7 @@
 
                 <li class="c-gnav__item">
                     {{-- アカウント --}}
-                    @if(true)
+                    @if(count($twitterAccounts) === 0)
                     <a href="/twitteraccount/add" class="c-gnav__link">
                         <div class="p-header__twiicon">Click!
                             <div class="c-fukidasi c-fukidasi--anime">アカウントを追加してください
@@ -27,15 +27,23 @@
                     @else
                     <div class="p-switchbox">
                         <label class="p-switchbox__label" for="label1">
-                            <div class="p-header__twiicon">アカ
-                            </div>
+                            {{-- todo:セレクテッドアカウントの設定 --}}
+                            <img src="{{$twitterAccounts[0]->image}}" alt=""
+                                class="p-header__twiicon p-header__twiicon--selected">
                         </label>
                         <input type="checkbox" id="label1" class="p-switchbox__checkbox" />
                         <div class="p_switchbox__content">
                             <ul class="c-float-menu">
-                                <li class="c-float-menu__list c-float-menu__list--border"> <a href="" class="c-float-menu__item">user0000001</a></li>
-                                <li class="c-float-menu__list c-float-menu__list--border"> <a href="" class="c-float-menu__item">user0000002</a></li>
-                                <li class="c-float-menu__list c-float-menu__list--border"> <a href="" class="c-float-menu__item">user0000003</a></li>
+                                @foreach ($twitterAccounts as $twitterAccount)
+                                <li class="c-float-menu__list"> <a href=""
+                                        class="c-float-menu__item">
+                                        <img src="{{$twitterAccount->image}}" alt="" class="p-header__twiicon--small">
+                                        {{$twitterAccount->screen_name}}</a></li>
+                                @endforeach
+
+                                <li class="c-float-menu__list c-float-menu__list--border"> <a href="/twitteraccount/add"
+                                    class="c-float-menu__item">
+                                    アカウントの追加</a></li>
                             </ul>
                         </div>
                     </div>

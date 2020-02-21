@@ -567,6 +567,7 @@
   box-shadow: 0 0 9px 2px #e0e0e0;
   &__list {
     list-style: none;
+
     &--border {
       border-bottom: solid 0.1em #eee;
     }
@@ -575,8 +576,11 @@
     }
   }
   &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     cursor: pointer;
-    display: inline-block;
+    // display: inline-block;
     width: 100%;
     padding: 10px;
     box-sizing: border-box;

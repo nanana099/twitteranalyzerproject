@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\TwitterAccount;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -29,6 +30,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // Todo:なぜか２かいも走る
+        // 現在ログイン中のユーザーの飲みにする
+        $twitterAccounts = TwitterAccount::get();
+        logger($twitterAccounts);
+        view()->share('twitterAccounts', $twitterAccounts);
     }
 }

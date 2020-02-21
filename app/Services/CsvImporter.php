@@ -64,8 +64,9 @@ class CSVimporter
             if ($row_count > 1) {
                 // Todo:列名と値の対応（プロも）
                 // Todo:この辺の定義を別クラスに切り出す
+                $twitterAccountId = 6;
                 $csvimport_array = [
-                    "twitter_account_id" => 1,
+                    "twitter_account_id" =>  $twitterAccountId ,
                     "twitter_tweet_id" => $row[0],
                     "content" => $row[2],
                     "posted_at"=> (new Carbon($row[3]))->addHour(9),
