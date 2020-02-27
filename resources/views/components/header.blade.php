@@ -27,23 +27,38 @@
                     @else
                     <div class="p-switchbox">
                         <label class="p-switchbox__label" for="label1">
-                            {{-- todo:セレクテッドアカウントの設定 --}}
-                            <img src="{{$twitterAccounts[0]->image}}" alt=""
-                                class="p-header__twiicon p-header__twiicon--selected">
+                            {{-- 選択中のアカウントの画像を表示 --}}
+                            @foreach ($twitterAccounts as $twitterAccount)
+                            @if(session('twitter_account_id') == $twitterAccount->id)
+                                <img src="{{$twitterAccount->image}}" alt=""
+                                    class="p-header__twiicon p-header__twiicon--selected">
+                            @endif
+                            @endforeach
                         </label>
+                        
                         <input type="checkbox" id="label1" class="p-switchbox__checkbox" />
                         <div class="p_switchbox__content">
                             <ul class="c-float-menu">
                                 @foreach ($twitterAccounts as $twitterAccount)
-                                <li class="c-float-menu__list"> <a href=""
-                                        class="c-float-menu__item">
+                                <li class="c-float-menu__list">
+
+                                    <a class="c-float-menu__item" href=""
+                                        onclick="event.preventDefault();
+                                        document.getElementById('{{'twitter-account-change'.$twitterAccount->id}}').submit();">
                                         <img src="{{$twitterAccount->image}}" alt="" class="p-header__twiicon--small">
-                                        {{$twitterAccount->screen_name}}</a></li>
+                                        {{$twitterAccount->screen_name}}</a>
+
+                                    <form id="{{'twitter-account-change'.$twitterAccount->id}}"
+                                        action="{{route('twitteraccount.change',['twitter_account_id' =>$twitterAccount->id])}}"
+                                        method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </li>
                                 @endforeach
 
                                 <li class="c-float-menu__list c-float-menu__list--border"> <a href="/twitteraccount/add"
-                                    class="c-float-menu__item">
-                                    アカウントの追加</a></li>
+                                        class="c-float-menu__item">
+                                        アカウントの追加</a></li>
                             </ul>
                         </div>
                     </div>

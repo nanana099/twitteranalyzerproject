@@ -8,9 +8,14 @@ use App\Services\TwitterAccountObject;
 use App\TwitterAccount;
 use Illuminate\Support\Facades\Auth;
 
-
 class TwitterAccountController extends Controller
 {
+    public function change(Request $request)
+    {
+        $id = $request->input('twitter_account_id');
+        session()->put(['twitter_account_id' => $id]);
+        return redirect()->route('tweetlist.show');
+    }
     // システムにTwitterアカウントを追加する
     public function add()
     {
@@ -50,6 +55,8 @@ class TwitterAccountController extends Controller
   
         if (count($account) > 0 && $account[0]['user_id'] !== Auth::id()) {
             // すでにTwitterアカウントが他のユーザーによって登録済みの場合は不可
+                // todo:選択中のアカウントを変更
+            
             return redirect()->route('mypage.monitor')->with('flash_message_error', 'Twitterアカウントが他のユーザにより登録済みのため、登録できませんでした。');
         } else {
             try {
@@ -66,13 +73,16 @@ class TwitterAccountController extends Controller
                 } else {
                     $msg = 'Twitterアカウントの登録に成功しました。自動化するためには「設定」を行いましょう！';
                 }
+
+                // todo:選択中のアカウントを変更
+        
   
                 // accounts：アカウント情報管理用。行がなければINSERT。行があればUPDATE（アクセストークン切れ等の場合更新が必要だから）
                 // account_settings：アカウントの設定管理用。行がなければINSERT。行があれば何もしない
                 // operation_statuses：アカウントの稼働状況管理よう。行がなければINSERT。行があれば何もしない
                 $account = TwitterAccount::updateOrCreate(['twitter_user_id' => $twitter_user_id], ['access_token' => $accessTokenStr,'user_id' => Auth::id(),'screen_name' => $screen_name, 'image' => $image_url]);
                 $account = TwitterAccount::updateOrCreate(['twitter_user_id' => $twitter_user_id], ['access_token' => $accessTokenStr,'user_id' => Auth::id(),'screen_name' => $screen_name, 'image' => $image_url]);
-      
+       
                 return redirect()->route('tweetlist.show')->with('flash_message_success', $msg);
             } catch (Exception $e) {
                 logger()->error($e);

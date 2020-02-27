@@ -40,6 +40,7 @@ Route::middleware(['verified'])->group(function () {
     // １．Twitterアカウントの登録
     Route::get('twitteraccount/add', 'TwitterAccountController@add'); // Twitterアカウントの追加
     Route::get('twitteraccount/callback', 'TwitterAccountController@callback'); // TwitterAPIからのコールバック
+    Route::post('twitteraccount/change', 'TwitterAccountController@change')->name('twitteraccount.change'); // Twitterアカウントの追加
     // ２．ツイートデータ読み込み画面
     Route::get('registtweet/show', 'RegistTweetController@show')->name('registtweet.show'); // ツイートデータ登録画面を表示
     Route::post('registtweet/post', 'RegistTweetController@upsert');                        // ツイートデータを更新

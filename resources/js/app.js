@@ -21,10 +21,9 @@ import InfiniteLoading from 'vue-infinite-loading';
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('tab', require('./components/tab.vue').default);
 Vue.component('file-uploader', require('./components/fileUploader.vue').default);
-Vue.component('tweet-list', require('./tweetlist.vue').default); 
+Vue.component('tweet-list', require('./components/tweetlist.vue').default); 
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

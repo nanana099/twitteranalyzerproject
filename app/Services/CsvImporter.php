@@ -64,7 +64,8 @@ class CSVimporter
             if ($row_count > 1) {
                 // Todo:列名と値の対応（プロも）
                 // Todo:この辺の定義を別クラスに切り出す
-                $twitterAccountId = 6;
+                // todo:アカウントのIDの取得方法（別ユーザーの混じったり、意図しないのになったりしないか？）
+                $twitterAccountId = session()->get('twitter_account_id');
                 $csvimport_array = [
                     "twitter_account_id" =>  $twitterAccountId ,
                     "twitter_tweet_id" => $row[0],
