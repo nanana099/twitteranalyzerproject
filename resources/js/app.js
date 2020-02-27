@@ -8,6 +8,8 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import InfiniteLoading from 'vue-infinite-loading';
+
 /** 
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -22,7 +24,7 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('tab', require('./components/tab.vue').default);
 Vue.component('file-uploader', require('./components/fileUploader.vue').default);
-Vue.component('tweet-list', require('./tweetlist.vue').default);
+Vue.component('tweet-list', require('./tweetlist.vue').default); 
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
