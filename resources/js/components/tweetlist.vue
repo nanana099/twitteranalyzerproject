@@ -230,7 +230,9 @@ export default {
         .then(function(response) {
           that.page = response.data.current_page;
           that.tweets.push(...response.data.data);
-          $state.loaded();
+          if (that.tweets.length > 0) {
+            $state.loaded();
+          }
           if (response.data.last_page === response.data.current_page) {
             $state.complete();
           }

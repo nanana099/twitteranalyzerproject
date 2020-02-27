@@ -2990,7 +2990,9 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
         (_that$tweets = that.tweets).push.apply(_that$tweets, _toConsumableArray(response.data.data));
 
-        $state.loaded();
+        if (that.tweets.length > 0) {
+          $state.loaded();
+        }
 
         if (response.data.last_page === response.data.current_page) {
           $state.complete();
