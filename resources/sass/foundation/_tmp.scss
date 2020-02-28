@@ -554,6 +554,7 @@
   position: absolute;
   top: 50px;
   right: 0;
+  z-index: 3;
 }
 /*クリックで中身を表示*/
 .p-switchbox .p-switchbox__checkbox:checked + .p_switchbox__content {
